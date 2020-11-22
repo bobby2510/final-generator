@@ -216,7 +216,7 @@ let custom_strategy = function(wk_cnt,bat_cnt,al_cnt,bowl_cnt,selected_team_one,
       team_number.addEventListener('click',()=>
       {
       nt =  Number(document.querySelector('#number_teams').value)
-      if(nt<1 || nt>3333){raiseError('Numbers of teams should be 1 - 3333 range'); return}
+      if(nt<1 || nt>10000){raiseError('Numbers of teams should be 1 - 10000 range'); return}
       team_generator_helper_one(selected_team_one,selected_team_two,team_one_index,team_two_index,nt,mn,csv,cev,selected_strategies,f1_players,f2_players,c1_players,c2_players,vc1_players,vc2_players,f_wk,f_bat,f_al,f_bowl,selected_tsd,series_index)
       })
 
