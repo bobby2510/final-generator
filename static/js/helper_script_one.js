@@ -134,7 +134,7 @@ submit_players.addEventListener('click',()=>
                     }
 
                 })
-                if(captain_cnt<2){raiseError('Atleast select two player'); return}
+                if(captain_cnt<1){raiseError('Atleast select two player'); return}
                 cp = document.getElementById('captain_panel')
                 cp.style.display="none"
                 // start the vice
@@ -163,7 +163,7 @@ submit_players.addEventListener('click',()=>
                         }
 
                     })
-                    if(vice_captain_cnt<2){raiseError('Atleast select two player'); return}
+                    if(vice_captain_cnt<1){raiseError('Atleast select two player'); return}
                     vcp = document.getElementById('vice_captain_panel')
                     vcp.style.display="none"
                     ts = document.getElementById('team_side')
