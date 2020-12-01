@@ -2,7 +2,10 @@ let diff_comb = [
    [1,3,2,5],[1,3,3,4],[1,4,3,3],[1,4,2,4],[1,4,1,5],[1,5,2,3],[1,5,1,4],[1,6,1,3],[1,3,1,6],[1,3,4,3],
    [2,3,3,3],[2,3,2,4],[2,3,1,5],[2,4,2,3],[2,4,1,4],[2,5,1,3],
    [3,3,2,3],[3,4,1,3],[3,3,1,4],
-   [4,3,1,3]
+   [4,3,1,3],[1,2,2,6],[1,2,3,5],[1,2,4,4],[1,2,5,3],[1,2,6,2],
+   [1,6,2,2],[1,5,3,2],[1,4,4,2],[1,3,5,2],
+   [2,5,2,2],[2,6,1,2],[3,4,2,2],[4,3,2,2],
+   [3,5,1,2],[4,4,1,2],[2,2,2,5],[3,2,1,5]
 ]
 let team_side_list=[[4,7],[5,6],[6,5],[7,4]]
 let team_generator = function(team_one,team_two,team_one_index,team_two_index,mn,csv,cev,fixed_one,fixed_two,captain_one,captain_two,vice_captain_one,vice_captain_two,selected_tsd,series_index)
@@ -97,7 +100,7 @@ let custom_strategy = function(wk_cnt,bat_cnt,al_cnt,bowl_cnt,selected_team_one,
       else if(player.player_role==3) f_al++;
       else f_bowl++;
    })
-   if(f_wk>4 || f_bat>6 || f_al>4 || f_bowl>6){raiseError('invalid selection of fixed players'); return;}
+   if(f_wk>4 || f_bat>6 || f_al>6 || f_bowl>6){raiseError('invalid selection of fixed players'); return;}
    temp_diff_comb=[]
    diff_comb.forEach((comb)=>
    {
