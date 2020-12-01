@@ -71,8 +71,8 @@ submit_players.addEventListener('click',()=>
     })
     if(team_one_cnt<8 || team_two_cnt<8){raiseError('you should select atleast 8 players from each team!'); return}
     if(wk_cnt<1){raiseError('there should be atleast 1 wicket keeper'); return }
-    if(bat_cnt<3){raiseError('there should be atleast 3 batsman'); return }
-    if(bowl_cnt<3){raiseError('there should be atleast 3 bowlers'); return }
+    if(bat_cnt<2){raiseError('there should be atleast 2 batsman'); return }
+    if(bowl_cnt<2){raiseError('there should be atleast 2 bowlers'); return }
     if(al_cnt<1){raiseError('there should be atleast 1 alrounder '); return }
     console.log(index_one)
     console.log(index_two)
@@ -134,7 +134,7 @@ submit_players.addEventListener('click',()=>
                     }
 
                 })
-                if(captain_cnt<1){raiseError('Atleast select two player'); return}
+                if(captain_cnt<1){raiseError('Atleast select one player'); return}
                 cp = document.getElementById('captain_panel')
                 cp.style.display="none"
                 // start the vice
@@ -163,7 +163,7 @@ submit_players.addEventListener('click',()=>
                         }
 
                     })
-                    if(vice_captain_cnt<1){raiseError('Atleast select two player'); return}
+                    if(vice_captain_cnt<1){raiseError('Atleast select one player'); return}
                     vcp = document.getElementById('vice_captain_panel')
                     vcp.style.display="none"
                     ts = document.getElementById('team_side')
