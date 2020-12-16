@@ -293,7 +293,7 @@ let get_hash_value = function(team,captain_index,vice_captain_index)
 {
    team.sort((x,y)=>
    {
-      if(x.player_id<y.id) return -1
+      if(x.player_id<y.player_id) return -1
       else return 1
    })
    let hash=0
